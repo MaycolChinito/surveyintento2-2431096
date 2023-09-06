@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="surveyintento2.View.partesqlPage"
+             Title="{Binding Name}"
+             xmlns:Models="clr-namespace:surveyintento2.Models"
+             x:DataType ="Models:Survey">
+            
+    
+    <VerticalStackLayout>
+        <VerticalStackLayout Padding="20"
+                             Spacing="10"
+                             VerticalOptions="StartAndExpand">
+            <Label Text="Name"/>
+            <Entry Text="{Binding Name}"/>
+            <Label Text="Birthdate"/>
+            <Entry Text="{Binding Birthdate}"/>
+            <Label Text="FavoriteTeam"/>
+            <Entry Text="{Binding FavoriteTeam}"/>
+            <Button Text="Save"
+                    Clicked="OnSaveClicked"/>
+            <Button Text="Delete"
+                    Clicked="OnDelete_Clicked"/>
+            <Button Text="Cancel"
+                    Clicked="OnCancel_Clicked"/>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
